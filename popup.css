@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Inter", Arial, sans-serif;
+  background: #f5f7fa;
+  color: #333;
+}
+
+.popup-container {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  max-width: 360px;
+  width: 100%;
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #1a73e8;
+  text-align: center;
+  user-select: none;
+}
+
+.popup-description {
+  font-size: 1.6rem;
+  color: #555;
+  margin-bottom: 0.8rem;
+}
+
+#speedRange {
+  width: 100%;
+  height: 14px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #1a73e8 50%, #ddd 50%);
+  cursor: pointer;
+  margin-bottom: 1.2rem;
+  -webkit-appearance: none;
+  transition: background 0.3s ease;
+}
+
+#speedRange::-webkit-slider-thumb,
+#speedRange::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #1a73e8;
+  border: 3px solid #fff;
+  box-shadow: 0 0 6px rgba(26,115,232,0.7);
+  cursor: pointer;
+  transition: background 0.3s ease;
+  position: relative;
+  z-index: 3;
+  border: none;
+}
+
+#speedRange:hover::-webkit-slider-thumb,
+#speedRange:hover::-moz-range-thumb {
+  background: #155ab6;
+}
+
+#speedValue {
+  display: block;
+  width: 100%;
+  max-width: 100px;
+  margin: 0 auto;
+  padding: 0.5rem 0.8rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  text-align: center;
+  transition: border-color 0.3s ease;
+}
+
+#speedValue:focus {
+  outline: none;
+  border-color: #1a73e8;
+  box-shadow: 0 0 8px rgba(26,115,232,0.3);
+}
+
+.btn {
+  margin-top: 1rem;
+  width: 100%;
+  padding: 0.8rem 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
+}
+
+#applyBtn {
+  background-color: #1a73e8;
+  box-shadow: 0 4px 12px rgba(26,115,232,0.4);
+}
+
+#applyBtn:hover {
+  background-color: #155ab6;
+  box-shadow: 0 6px 16px rgba(21,90,182,0.6);
+}
+
+#resetBtn {
+  background-color: #28a745;
+  box-shadow: 0 4px 12px rgba(40,167,69,0.4);
+}
+
+#resetBtn:hover {
+  background-color: #1e7e34;
+  box-shadow: 0 6px 16px rgba(30,126,52,0.6);
+}
+
+@media (max-width: 400px) {
+  #speedValue {
+    max-width: 100%;
+  }
+}
